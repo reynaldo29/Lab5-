@@ -6,8 +6,7 @@ BEGIN
 select * from Product;
 END
 
-
-
+-------------------------------------------
 CREATE PROCEDURE InsertProduct 
     @IdProducto VARCHAR(20),
     @Nombre VARCHAR(20),
