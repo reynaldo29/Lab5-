@@ -28,13 +28,26 @@ namespace Negocio
                 var max = productos.Select(x=>x.IdProducto).Max();
                 producto.IdProducto = max+1;
 
-                datos.Insertar(producto);
+                datos.Insertar2(producto);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-       
+
+        public void Actualizar(Producto producto)
+        {
+            try
+            {
+                
+                datos.Actualizar(producto);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

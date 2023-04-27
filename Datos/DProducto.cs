@@ -12,7 +12,7 @@ namespace Datos
     public class DProducto
     {
         private string connectionString = "Data Source=DESKTOP-MH893DO;Initial Catalog=Tecsup;Integrated Security=True;";
-
+       
         public List<Producto> Mostrar()
         {
             SqlConnection connection = null;
@@ -86,6 +86,28 @@ namespace Datos
             {
                 throw ex;
             }
+        }
+
+        public void Insertar2(Producto producto)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@IdProducto", producto.IdProducto));
+            parameters.Add(new SqlParameter("@Nombre", producto.Nombre));
+            parameters.Add(new SqlParameter("@Codigo", producto.Codigo));
+
+
+            SqlHelper.ExecuteNonQuery2("InsertProduct", parameters);
+        }
+
+        public void Actualizar(Producto producto)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@IdProducto", producto.IdProducto));
+            parameters.Add(new SqlParameter("@Nombre", producto.Nombre));
+            parameters.Add(new SqlParameter("@Codigo", producto.Codigo));
+
+
+            SqlHelper.ExecuteNonQuery2("InsertProduct", parameters);
         }
     }
 }
