@@ -107,7 +107,7 @@ namespace Datos
             parameters.Add(new SqlParameter("@Codigo", producto.Codigo));
 
 
-            SqlHelper.ExecuteNonQuery2("InsertProduct", parameters);
+            SqlHelper.ExecuteNonQuery2("UdpateProduct2", parameters);
         }
     }
 }

@@ -36,6 +36,13 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.txtUpdateNombre = new System.Windows.Forms.TextBox();
+            this.txtUpdateCodigo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtIdProduct = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,11 +114,77 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Codigo";
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(477, 161);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 8;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // txtUpdateNombre
+            // 
+            this.txtUpdateNombre.Location = new System.Drawing.Point(630, 175);
+            this.txtUpdateNombre.Name = "txtUpdateNombre";
+            this.txtUpdateNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateNombre.TabIndex = 9;
+            // 
+            // txtUpdateCodigo
+            // 
+            this.txtUpdateCodigo.Location = new System.Drawing.Point(630, 213);
+            this.txtUpdateCodigo.Name = "txtUpdateCodigo";
+            this.txtUpdateCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateCodigo.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(580, 182);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Nombre";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(578, 216);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Codigo";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(580, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Id";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // txtIdProduct
+            // 
+            this.txtIdProduct.Location = new System.Drawing.Point(630, 251);
+            this.txtIdProduct.Name = "txtIdProduct";
+            this.txtIdProduct.Size = new System.Drawing.Size(100, 20);
+            this.txtIdProduct.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtIdProduct);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtUpdateCodigo);
+            this.Controls.Add(this.txtUpdateNombre);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodigo);
@@ -138,6 +211,13 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.TextBox txtUpdateNombre;
+        private System.Windows.Forms.TextBox txtUpdateCodigo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtIdProduct;
     }
 }
 

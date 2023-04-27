@@ -48,5 +48,31 @@ namespace WindowsFormsApp3
            
 
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BProducto negocio = new BProducto();
+                Producto producto = new Producto();
+                producto.Nombre = txtUpdateNombre.Text;
+                producto.Codigo = txtUpdateCodigo.Text;
+                producto.IdProducto = txtIdProduct.Text;
+
+                negocio.Actualizar(producto);
+
+                MessageBox.Show("Actualizacion exitosa");
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Error");
+            }
+            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
