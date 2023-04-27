@@ -1,4 +1,4 @@
-# Lab5-
+
 
 create proc USP_GetProducts
 as
@@ -17,3 +17,18 @@ BEGIN
     VALUES (@IdProducto, @Nombre, @Codigo)
 END
 GO
+----------------------------------------------
+
+create proc UdpateProduct2 
+	@IdProducto varchar(50),
+	@Codigo varchar(50),
+	@Nombre varchar(50)
+as 
+
+BEGIN
+     UPDATE Product
+		SET    Nombre = @Nombre,
+               Codigo = @Codigo
+        WHERE  IdProducto= @IdProducto
+
+END
