@@ -49,5 +49,18 @@ namespace Negocio
             }
         }
 
+        public void Eliminar(Producto producto)
+        {
+            try
+            {
+
+                datos.Eliminar(producto);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

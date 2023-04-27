@@ -25,7 +25,7 @@ namespace Datos
                 connection = new SqlConnection(connectionString);
 
                 connection.Open();
-                command = new SqlCommand("USP_GetProducts", connection);
+                command = new SqlCommand("USP_GetProducts2", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
                 SqlDataReader reader = command.ExecuteReader();
@@ -38,6 +38,7 @@ namespace Datos
                     producto.Nombre = reader["Nombre"].ToString();
                     producto.IdProducto = reader["IdProducto"].ToString();
                     producto.Codigo = reader["Codigo"].ToString();
+                    producto.Activo = reader["Activo"].ToString() ;
 
 
 
@@ -78,6 +79,7 @@ namespace Datos
                     command.Parameters.AddWithValue("@IdProducto", producto.IdProducto);
                     command.Parameters.AddWithValue("@Nombre", producto.Nombre);
                     command.Parameters.AddWithValue("@Codigo", producto.Codigo);
+                    command.Parameters.AddWithValue("@Activo", producto.Activo);
 
                     command.ExecuteNonQuery();
                 }
@@ -94,7 +96,7 @@ namespace Datos
             parameters.Add(new SqlParameter("@IdProducto", producto.IdProducto));
             parameters.Add(new SqlParameter("@Nombre", producto.Nombre));
             parameters.Add(new SqlParameter("@Codigo", producto.Codigo));
-
+            parameters.Add(new SqlParameter("@Activo", producto.Activo));
 
             SqlHelper.ExecuteNonQuery2("InsertProduct", parameters);
         }
@@ -105,9 +107,17 @@ namespace Datos
             parameters.Add(new SqlParameter("@IdProducto", producto.IdProducto));
             parameters.Add(new SqlParameter("@Nombre", producto.Nombre));
             parameters.Add(new SqlParameter("@Codigo", producto.Codigo));
+            parameters.Add(new SqlParameter("@Activo", producto.Activo));
 
 
             SqlHelper.ExecuteNonQuery2("UdpateProduct2", parameters);
+        }
+
+        public void Eliminar(Producto producto)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@IdProducto", producto.IdProducto));
+            SqlHelper.ExecuteNonQuery2("DeleteProducts ", parameters);
         }
     }
 }

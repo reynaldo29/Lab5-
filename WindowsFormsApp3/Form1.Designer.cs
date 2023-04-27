@@ -43,6 +43,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtIdProduct = new System.Windows.Forms.TextBox();
+            this.cboxAct = new System.Windows.Forms.ComboBox();
+            this.Activo = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboxUpdate = new System.Windows.Forms.ComboBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtEliminar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +123,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(477, 161);
+            this.btnActualizar.Location = new System.Drawing.Point(477, 185);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 8;
@@ -126,7 +133,7 @@
             // 
             // txtUpdateNombre
             // 
-            this.txtUpdateNombre.Location = new System.Drawing.Point(630, 175);
+            this.txtUpdateNombre.Location = new System.Drawing.Point(630, 187);
             this.txtUpdateNombre.Name = "txtUpdateNombre";
             this.txtUpdateNombre.Size = new System.Drawing.Size(100, 20);
             this.txtUpdateNombre.TabIndex = 9;
@@ -141,7 +148,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(580, 182);
+            this.label3.Location = new System.Drawing.Point(580, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 11;
@@ -159,7 +166,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(580, 258);
+            this.label5.Location = new System.Drawing.Point(580, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 13);
             this.label5.TabIndex = 13;
@@ -168,16 +175,91 @@
             // 
             // txtIdProduct
             // 
-            this.txtIdProduct.Location = new System.Drawing.Point(630, 251);
+            this.txtIdProduct.Location = new System.Drawing.Point(630, 265);
             this.txtIdProduct.Name = "txtIdProduct";
             this.txtIdProduct.Size = new System.Drawing.Size(100, 20);
             this.txtIdProduct.TabIndex = 14;
+            // 
+            // cboxAct
+            // 
+            this.cboxAct.FormattingEnabled = true;
+            this.cboxAct.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.cboxAct.Location = new System.Drawing.Point(630, 124);
+            this.cboxAct.Name = "cboxAct";
+            this.cboxAct.Size = new System.Drawing.Size(121, 21);
+            this.cboxAct.TabIndex = 15;
+            this.cboxAct.SelectedIndexChanged += new System.EventHandler(this.cboxAct_SelectedIndexChanged);
+            // 
+            // Activo
+            // 
+            this.Activo.AutoSize = true;
+            this.Activo.Location = new System.Drawing.Point(578, 132);
+            this.Activo.Name = "Activo";
+            this.Activo.Size = new System.Drawing.Size(37, 13);
+            this.Activo.TabIndex = 16;
+            this.Activo.Text = "Activo";
+            this.Activo.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(580, 244);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Activo";
+            // 
+            // cboxUpdate
+            // 
+            this.cboxUpdate.FormattingEnabled = true;
+            this.cboxUpdate.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.cboxUpdate.Location = new System.Drawing.Point(630, 236);
+            this.cboxUpdate.Name = "cboxUpdate";
+            this.cboxUpdate.Size = new System.Drawing.Size(121, 21);
+            this.cboxUpdate.TabIndex = 18;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(477, 334);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 19;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(580, 344);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Id";
+            // 
+            // txtEliminar
+            // 
+            this.txtEliminar.Location = new System.Drawing.Point(630, 336);
+            this.txtEliminar.Name = "txtEliminar";
+            this.txtEliminar.Size = new System.Drawing.Size(100, 20);
+            this.txtEliminar.TabIndex = 21;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtEliminar);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.cboxUpdate);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Activo);
+            this.Controls.Add(this.cboxAct);
             this.Controls.Add(this.txtIdProduct);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -218,6 +300,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtIdProduct;
+        private System.Windows.Forms.ComboBox cboxAct;
+        private System.Windows.Forms.Label Activo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboxUpdate;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtEliminar;
     }
 }
 

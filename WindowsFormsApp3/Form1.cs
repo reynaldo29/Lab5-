@@ -38,6 +38,7 @@ namespace WindowsFormsApp3
                 Producto producto = new Producto();
                 producto.Nombre = txtNombre.Text;
                 producto.Codigo = txtCodigo.Text;
+                producto.Activo = cboxAct.Text;
                 negocio.Insertar(producto);
 
                 MessageBox.Show("Registro exitoso");
@@ -53,10 +54,12 @@ namespace WindowsFormsApp3
         {
             try
             {
+              
                 BProducto negocio = new BProducto();
                 Producto producto = new Producto();
                 producto.Nombre = txtUpdateNombre.Text;
                 producto.Codigo = txtUpdateCodigo.Text;
+                producto.Activo= cboxUpdate.Text;
                 producto.IdProducto = txtIdProduct.Text;
 
                 negocio.Actualizar(producto);
@@ -72,6 +75,35 @@ namespace WindowsFormsApp3
 
         private void label5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboxAct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BProducto negocio = new BProducto();
+                Producto producto = new Producto();
+                producto.IdProducto = txtEliminar.Text;
+
+                negocio.Eliminar(producto);
+
+                MessageBox.Show("Eliminacion exitosa");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error");
+            }
 
         }
     }
